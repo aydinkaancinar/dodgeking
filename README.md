@@ -1,5 +1,7 @@
 # eat-run-game
 A game where a blob expands as it gets points and dodges bullets
+## link to the game
+https://bit.ly/2NOUe6f
 ## creator
 * Aydin Kaan Cinar
 ## screenshots
