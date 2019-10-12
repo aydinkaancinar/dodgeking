@@ -7,7 +7,7 @@ var blockSize = 10;
 function setup() {
   createCanvas(600,600);
   frameRate(hiz);
-  img = loadImage('block.png');
+  img = loadImage('block.jpg');
   shrink = new Shrink();
   yilan = new Bubble();
   yemek = new Yemek();
