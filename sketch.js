@@ -7,6 +7,7 @@ var blockSize = 10;
 function setup() {
   createCanvas(600,600);
   frameRate(hiz);
+  img = loadImage('block.png');
   shrink = new Shrink();
   yilan = new Bubble();
   yemek = new Yemek();
@@ -18,7 +19,7 @@ function draw() {
   background("#000000");
   yilan.eatFood(yemek);
   yilan.update();
-  yilan.show();
+  yilan.show(img);
   yemek.show();
   shrink.show();
   ates.update(yilan.x,yilan.x+blockSize,yilan.y,yilan.y+blockSize);
