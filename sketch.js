@@ -2,14 +2,14 @@ var yilan;
 var yemek;
 var ates;
 var shrink;
-var hiz = 50;
+var hiz = 70;
 var blockSize = 10;
 function setup() {
   createCanvas(600,600);
   frameRate(hiz);
   img = loadImage('block.jpg');
   shrink = new Shrink();
-  yilan = new Bubble();
+  yilan = new Bubble(new Player());
   yemek = new Yemek();
   ates = new Fire();
   yemek.pickLocation();

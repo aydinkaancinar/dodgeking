@@ -1,4 +1,4 @@
-function Bubble(){
+function Bubble(player){
   var x1 = "x1";
   var y1 = "y1";
   this.x = 290;
@@ -7,6 +7,7 @@ function Bubble(){
   this.ySpeed = 0;
   this.total = 0;
   this.size = 0;
+  this.player = player;
 
   this.eatFood = function(foodkek){
     if((foodkek.x >= this.x) && (foodkek.x <= this.x+blockSize) &&(foodkek.y >= this.y)&& (foodkek.y <= this.y+blockSize)){
@@ -41,9 +42,7 @@ function Bubble(){
 
   this.show = function(img){
     //stroke("ffffff");
-    blockSize = 100 + this.size;
-    rect(this.x, this.y, blockSize, blockSize)
-    image(img, this.x, this.y);
-    img.resize(blockSize, blockSize);
+    blockSize = 20 + this.size;
+    this.player.draw(blockSize, this.x, this.y)
   }
 }

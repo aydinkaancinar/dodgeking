@@ -58,6 +58,7 @@ function Fire(){
     for (var i in this.point){
       this.point[i].x += this.point[i].xSpeed;
       this.point[i].y += this.point[i].ySpeed;
+      strokeWeight(2)
       fill("#ff0000");
       rect(this.point[i].x, this.point[i].y,blockSize1, blockSize1, 10, 10)
     }
