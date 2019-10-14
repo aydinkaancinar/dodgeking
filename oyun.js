@@ -42,8 +42,8 @@ function Bubble(){
   this.show = function(img){
     //stroke("ffffff");
     blockSize = 100 + this.size;
+    rect(this.x, this.y, blockSize, blockSize)
     image(img, this.x, this.y);
     img.resize(blockSize, blockSize);
-    rect(this.x, this.y, blockSize, blockSize)
   }
 }
