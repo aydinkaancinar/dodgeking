@@ -1,5 +1,5 @@
 # blockgame
-A game where a blob expands as it gets points and dodges bullets
+A game where a block gets bigger as user scores points
 ## link to the game
 https://aydinkaancinar.github.io/blockgame
 ## creator
