@@ -50,6 +50,7 @@ function Fire(){
     for (var i in this.point){
       if(this.point[i].x>=bubblex1 && this.point[i].x<=bubblex2 && this.point[i].y >= bubbley1 && this.point[i].y <= bubbley2){
         end();
+        location.reload();
       }
     }
   }
