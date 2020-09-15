@@ -12,6 +12,7 @@ function Yemek(){
   }
   this.show = function(){
       fill("#33cc33");
+      strokeWeight(2)
       rect(this.x, this.y, blockSize2, blockSize2, 10, 10)
     }
   }
