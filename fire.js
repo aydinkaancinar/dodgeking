@@ -21,8 +21,8 @@ function Fire(){
       }
       this.point[u].xSpeed = 0;
       this.point[u].ySpeed = 0;
-      var col = (Math.floor(Math.random() * 600) + 0);
-      var row = (Math.floor(Math.random() * 600) + 0);
+      var col = (Math.floor(Math.random() * 500) + 0);
+      var row = (Math.floor(Math.random() * 500) + 0);
       var ran = (Math.floor(Math.random() * 4) + 1);
       if(ran == 1){
         this.point[u].x = col;
@@ -36,12 +36,12 @@ function Fire(){
       }
       if(ran == 3){
         this.point[u].y = row;
-        this.point[u].x = 600-blockSize1;
+        this.point[u].x = 500-blockSize1;
         this.point[u].xSpeed = -1;
       }
       if(ran == 4){
         this.point[u].x = col;
-        this.point[u].y = 600-blockSize1;
+        this.point[u].y = 500-blockSize1;
         this.point[u].ySpeed = -1;
       }
     }
@@ -49,7 +49,12 @@ function Fire(){
   this.endGame = function(bubblex1, bubblex2, bubbley1, bubbley2){
     for (var i in this.point){
       if(this.point[i].x>=bubblex1 && this.point[i].x<=bubblex2 && this.point[i].y >= bubbley1 && this.point[i].y <= bubbley2){
-        location.reload();
+        noLoop();
+        fill("#ffffff");
+        textSize(32);
+        text("GAME OVER", 150, 250);
+        textSize(18);
+        text("Press R to restart", 180, 280);
       }
     }
   }

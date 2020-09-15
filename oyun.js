@@ -15,9 +15,22 @@ function Bubble(player){
       this.total += 1;
       this.size += 1;
     }
+
+    var highscore = localStorage.getItem("highscore");
+
+if(highscore !== null){
+    if (this.total > highscore) {
+        localStorage.setItem("highscore", this.total);      
+    }
+}
+else{
+    localStorage.setItem("highscore", this.total);
+}
     fill("#ffffff");
-    textSize(32);
-    text(this.total, 10, 30);
+    textSize(20);
+    text("HIGH SCORE: " + localStorage.getItem("highscore"), 10, 30);
+    text("SCORE: " + this.total, 10, 60);
+  
   }
 
   this.getSmall = function(small){
@@ -35,8 +48,8 @@ function Bubble(player){
   this.update = function(){
     this.x = this.x + this.xSpeed;
     this.y += this.ySpeed;
-    this.x = constrain(this.x, 0, 600-blockSize);
-    this.y = constrain(this.y, 0, 600-blockSize);
+    this.x = constrain(this.x, 0, 500-blockSize);
+    this.y = constrain(this.y, 0, 500-blockSize);
 
   }
 
